@@ -912,10 +912,12 @@ void subtotal_posts::operator()(post_t& post)
     assert(result.second);
 #endif
   } else {
+    /*
     if (post.has_flags(POST_VIRTUAL) != (*i).second.is_virtual)
       throw_(std::logic_error,
              _("'equity' cannot accept virtual and "
                "non-virtual postings to the same account"));
+    */
 
     add_or_set_value((*i).second.value, amount);
   }
